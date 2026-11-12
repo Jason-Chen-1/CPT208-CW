@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>照片墙 | 枫盈苏州</title>
+  <meta name="description" content="枫盈苏州照片墙，浏览大家留下的枫桥瞬间，并上传自己的影像记录。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="photo-wall-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="site-header-main">
+        <a class="brand" href="index.html" aria-label="返回枫盈苏州首页">
+          <span class="brand-mark"><img src="images/log.jpg" alt=""></span>
+          <span class="brand-copy">
+            <strong data-i18n="common.brand.name">枫盈苏州</strong>
+            <span data-i18n="common.brand.tagline">苏州枫桥文化导览</span>
+          </span>
+        </a>
+
+        <span class="site-header-tools" aria-label="辅助功能与语言入口">
+          <button class="header-tool header-tool-audio" type="button" data-audio-toggle aria-pressed="false" data-i18n="common.audio">
+            音乐
+          </button>
+          <button class="header-tool header-tool-senior" type="button" data-senior-mode-toggle aria-pressed="false" data-i18n="common.senior">
+            长辈模式
+          </button>
+          <button class="header-tool header-tool-language" type="button" data-language-toggle aria-label="中英文切换，暂未启用" data-i18n="common.language">
+            中/EN
+          </button>
+          <button class="header-tool header-tool-settings" type="button" data-settings-toggle aria-expanded="false" aria-controls="header-settings-panel" data-i18n="common.settings">
+            设置
+          </button>
+          <div class="header-settings-panel" id="header-settings-panel" data-settings-panel aria-hidden="true">
+            <button class="header-settings-action" type="button" data-settings-audio>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.audio">音乐</strong>
+                <span data-settings-audio-status>点击播放</span>
+              </span>
+            </button>
+            <button class="header-settings-action" type="button" data-settings-senior>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.senior">长辈模式</strong>
+                <span data-settings-senior-status>当前关闭</span>
+              </span>
+            </button>
+            <button class="header-settings-action" type="button" data-settings-language>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.language">中/EN</strong>
+                <span data-settings-language-status>当前中文</span>
+              </span>
+            </button>
+          </div>
+        </span>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="photo-wall-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only" data-i18n="common.nav.open">打开导航</span>
+      </button>
+
+      <nav class="site-nav" id="photo-wall-nav" aria-label="全站导航">
+        <a href="index.html#top" data-i18n="common.nav.home">首页</a>
+        <a href="interactive-map.html" data-i18n="common.nav.map">互动地图</a>
+        <a href="photo-wall.html" aria-current="page" data-i18n="common.nav.photo">照片墙</a>
+        <a href="notice-board.html" data-i18n="common.nav.notice">公告栏</a>
+        <a href="smart-agent.html" data-i18n="common.nav.agent">智能枫桥</a>
+      </nav>
+    </header>
+
+    <main class="photo-wall-main">
+      <section class="photo-wall-hero">
+        <div class="photo-wall-hero-copy">
+          <p class="eyebrow">Community Photo Wall</p>
+          <h1 data-i18n-html="photo.hero.title">把你在枫桥遇见的
+            <span>光影、桥影和人情味，</span>
+            轻轻挂上来。
+          </h1>
+          <p class="hero-summary" data-i18n="photo.hero.summary">
+            照片墙汇集了游客与居民在枫桥留下的光影瞬间，也欢迎你把自己的所见所感一并挂上来。
+          </p>
+        </div>
+
+        <aside class="photo-wall-hero-panel" aria-label="上传入口">
+          <article class="photo-wall-upload-card">
+            <div class="photo-wall-upload-intro">
+              <p class="eyebrow" data-i18n="photo.upload.eyebrow">上传入口</p>
+              <h2 data-i18n="photo.upload.title">上传一张照片</h2>
+              <p data-i18n="photo.upload.p">选中图片后即可查看效果</p>
+            </div>
+
+            <label class="upload-dropzone upload-dropzone-hero" for="photo-upload-input">
+              <span class="upload-icon" aria-hidden="true">+</span>
+              <strong data-i18n="photo.upload.strong">把这一刻挂上来</strong>
+              <span data-i18n="photo.upload.span">选择图片后会在下方即时预览</span>
+              <input id="photo-upload-input" type="file" accept="image/*" multiple>
+            </label>
+
+            <p class="photo-wall-hero-meta" data-i18n-html="photo.meta">当前已展示 <span id="photo-count">0</span> 张照片</p>
+          </article>
+        </aside>
+      </section>
+
+      <section class="photo-wall-gallery section" id="shared-gallery">
+        <div class="gallery-topbar">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="photo.gallery.eyebrow">共享照片墙</p>
+            <h2 data-i18n="photo.gallery.title">浏览大家留下的枫桥瞬间</h2>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="photo-upload-toast" id="photo-upload-toast" aria-live="polite" aria-atomic="true" hidden>
+    <div class="photo-upload-toast-inner" role="status">
+      <span class="photo-upload-toast-dot" aria-hidden="true"></span>
+      <span class="photo-upload-toast-text" data-i18n="photo.toast.success">上传成功</span>
+      <button class="photo-upload-toast-close" type="button" data-photo-upload-toast-close aria-label="关闭上传成功提示" data-i18n="common.close">关闭</button>
+    </div>
+  </div>
+
+  <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true">
+    <div class="photo-lightbox-backdrop" data-photo-lightbox-close></div>
+    <section class="photo-lightbox-sheet" role="dialog" aria-modal="true" aria-labelledby="photo-lightbox-title">
+      <header class="photo-lightbox-header">
+        <div class="photo-lightbox-copy">
+          <p class="photo-lightbox-kicker" data-i18n="photo.lightbox.kicker">照片预览</p>
+          <h2 id="photo-lightbox-title" data-i18n="photo.lightbox.title">枫桥瞬间</h2>
+          <p class="photo-lightbox-date" id="photo-lightbox-date"></p>
+        </div>
+        <button class="photo-lightbox-close" type="button" data-photo-lightbox-close data-i18n="common.close">关闭</button>
+      </header>
+      <div class="photo-lightbox-body">
+        <figure class="photo-lightbox-media">
+          <img id="photo-lightbox-image" src="" alt="">
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="zoomable-image-viewer.js"></script>
+  <script src="photo-wall.js"></script>
+</body>
+</html>

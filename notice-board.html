@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公告栏 | 枫盈苏州</title>
+  <meta name="description" content="枫盈苏州公告栏，集中展示社区活动、景区运营更新与便民提醒。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="notice-board-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="site-header-main">
+        <a class="brand" href="index.html" aria-label="返回枫盈苏州首页">
+          <span class="brand-mark"><img src="images/log.jpg" alt=""></span>
+          <span class="brand-copy">
+            <strong data-i18n="common.brand.name">枫盈苏州</strong>
+            <span data-i18n="common.brand.tagline">苏州枫桥文化导览</span>
+          </span>
+        </a>
+
+        <span class="site-header-tools" aria-label="辅助功能与语言入口">
+          <button class="header-tool header-tool-audio" type="button" data-audio-toggle aria-pressed="false" data-i18n="common.audio">
+            音乐
+          </button>
+          <button class="header-tool header-tool-senior" type="button" data-senior-mode-toggle aria-pressed="false" data-i18n="common.senior">
+            长辈模式
+          </button>
+          <button class="header-tool header-tool-language" type="button" data-language-toggle aria-label="中英文切换，暂未启用" data-i18n="common.language">
+            中/EN
+          </button>
+          <button class="header-tool header-tool-settings" type="button" data-settings-toggle aria-expanded="false" aria-controls="header-settings-panel" data-i18n="common.settings">
+            设置
+          </button>
+          <div class="header-settings-panel" id="header-settings-panel" data-settings-panel aria-hidden="true">
+            <button class="header-settings-action" type="button" data-settings-audio>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.audio">音乐</strong>
+                <span data-settings-audio-status>点击播放</span>
+              </span>
+            </button>
+            <button class="header-settings-action" type="button" data-settings-senior>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.senior">长辈模式</strong>
+                <span data-settings-senior-status>当前关闭</span>
+              </span>
+            </button>
+            <button class="header-settings-action" type="button" data-settings-language>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.language">中/EN</strong>
+                <span data-settings-language-status>当前中文</span>
+              </span>
+            </button>
+          </div>
+        </span>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="notice-board-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only" data-i18n="common.nav.open">打开导航</span>
+      </button>
+
+      <nav class="site-nav" id="notice-board-nav" aria-label="全站导航">
+        <a href="index.html#top" data-i18n="common.nav.home">首页</a>
+        <a href="interactive-map.html" data-i18n="common.nav.map">互动地图</a>
+        <a href="photo-wall.html" data-i18n="common.nav.photo">照片墙</a>
+        <a href="notice-board.html" aria-current="page" data-i18n="common.nav.notice">公告栏</a>
+        <a href="smart-agent.html" data-i18n="common.nav.agent">智能枫桥</a>
+      </nav>
+    </header>
+
+    <main class="notice-board-main">
+      <section class="notice-hero">
+        <div class="notice-hero-copy">
+          <p class="eyebrow">Resident Notice Board</p>
+          <h1 data-i18n-html="notice.hero.title">枫桥公告栏
+            <span>家门口的重要提醒，</span>
+            都在这。
+          </h1>
+          <p class="hero-summary" data-i18n="notice.hero.summary">
+            这是面向游客、枫桥街道居民与社区关注者的公告汇总页，信息分类清晰、阅读便捷，帮助您快速查找日常服务、邻里活动及景区运营相关内容。
+          </p>
+        </div>
+
+        <aside class="notice-hero-panel" aria-label="重要提醒">
+          <section class="notice-hero-alert" aria-labelledby="notice-alert-title">
+            <div class="notice-hero-alert-head">
+              <p class="eyebrow" data-i18n="notice.alert.eyebrow">重要提醒</p>
+              <h2 id="notice-alert-title" data-i18n="notice.alert.title">优先查看最新提醒</h2>
+            </div>
+            <div class="notice-hero-alert-list" id="notice-hero-alert-list" aria-live="polite"></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="notice-board-shell section" id="notice-board">
+        <div class="notice-board-topbar">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="notice.board.eyebrow">公告列表</p>
+            <h2 data-i18n="notice.board.title">按类别查看社区活动、运营信息与便民提醒</h2>
+            <p data-i18n="notice.board.summary">内容按居民视角组织，方便快速查看社区活动、景区运营与便民提醒。</p>
+          </div>
+
+          <div class="notice-filter-bar" aria-label="公告分类筛选">
+            <button class="notice-filter-chip is-active" type="button" data-category-filter="all" data-i18n="notice.filter.all">全部</button>
+            <button class="notice-filter-chip" type="button" data-category-filter="community" data-i18n="notice.filter.community">社区活动</button>
+            <button class="notice-filter-chip" type="button" data-category-filter="operations" data-i18n="notice.filter.operations">景区运营</button>
+            <button class="notice-filter-chip" type="button" data-category-filter="service" data-i18n="notice.filter.service">便民提醒</button>
+          </div>
+        </div>
+
+        <div class="notice-columns" id="notice-columns"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="notice-modal" id="notice-modal" aria-hidden="true">
+    <button class="notice-modal-backdrop" type="button" aria-label="关闭公告详情"></button>
+    <section class="notice-sheet" role="dialog" aria-modal="true" aria-labelledby="notice-sheet-title">
+      <header class="notice-sheet-header">
+        <div>
+          <p class="notice-sheet-kicker" data-i18n="notice.modal.kicker">公告详情</p>
+          <h2 id="notice-sheet-title" data-i18n="notice.modal.title">查看完整内容</h2>
+        </div>
+        <button class="notice-sheet-close" type="button" data-i18n="common.close">关闭</button>
+      </header>
+      <div class="notice-sheet-body" id="notice-sheet-body"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="notice-board.js"></script>
+</body>
+</html>

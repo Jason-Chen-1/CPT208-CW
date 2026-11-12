@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>枫盈苏州 | 苏州枫桥文化导览</title>
+  <meta name="description" content="枫盈苏州首页，集中呈现枫桥景区概览、游览信息、互动入口与社区动态。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="site-header-main">
+        <a class="brand" href="#top" aria-label="返回首页">
+          <span class="brand-mark"><img src="images/log.jpg" alt=""></span>
+          <span class="brand-copy">
+            <strong data-i18n="common.brand.name">枫盈苏州</strong>
+            <span data-i18n="common.brand.tagline">苏州枫桥文化导览</span>
+          </span>
+        </a>
+
+        <span class="site-header-tools" aria-label="辅助功能与语言入口">
+          <button class="header-tool header-tool-audio" type="button" data-audio-toggle aria-pressed="false" data-i18n="common.audio">
+            音乐
+          </button>
+          <button class="header-tool header-tool-senior" type="button" data-senior-mode-toggle aria-pressed="false" data-i18n="common.senior">
+            长辈模式
+          </button>
+          <button class="header-tool header-tool-language" type="button" data-language-toggle aria-label="中英文切换，暂未启用" data-i18n="common.language">
+            中/EN
+          </button>
+          <button class="header-tool header-tool-settings" type="button" data-settings-toggle aria-expanded="false" aria-controls="header-settings-panel" data-i18n="common.settings">
+            设置
+          </button>
+          <div class="header-settings-panel" id="header-settings-panel" data-settings-panel aria-hidden="true">
+            <button class="header-settings-action" type="button" data-settings-audio>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.audio">音乐</strong>
+                <span data-settings-audio-status>点击播放</span>
+              </span>
+            </button>
+            <button class="header-settings-action" type="button" data-settings-senior>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.senior">长辈模式</strong>
+                <span data-settings-senior-status>当前关闭</span>
+              </span>
+            </button>
+            <button class="header-settings-action" type="button" data-settings-language>
+              <span class="header-settings-copy">
+                <strong data-i18n="common.language">中/EN</strong>
+                <span data-settings-language-status>当前中文</span>
+              </span>
+            </button>
+          </div>
+        </span>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only" data-i18n="common.nav.open">打开导航</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="全站导航">
+        <a href="#top" aria-current="page" data-i18n="common.nav.home">首页</a>
+        <a href="interactive-map.html" data-i18n="common.nav.map">互动地图</a>
+        <a href="photo-wall.html" data-i18n="common.nav.photo">照片墙</a>
+        <a href="notice-board.html" data-i18n="common.nav.notice">公告栏</a>
+        <a href="smart-agent.html" data-i18n="common.nav.agent">智能枫桥</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-background-soften" aria-hidden="true"></div>
+        <div class="hero-background-marquee" aria-hidden="true">
+          <figure class="hero-background-frame hero-background-frame-1"></figure>
+          <figure class="hero-background-frame hero-background-frame-2"></figure>
+          <figure class="hero-background-frame hero-background-frame-3"></figure>
+          <figure class="hero-background-frame hero-background-frame-4"></figure>
+        </div>
+        <div class="hero-indicators" aria-hidden="true">
+          <span class="hero-indicator-dot is-active"></span>
+          <span class="hero-indicator-dot"></span>
+          <span class="hero-indicator-dot"></span>
+          <span class="hero-indicator-dot"></span>
+        </div>
+      </section>
+
+      <section class="section section-guide" id="guide">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="index.guide.eyebrow">导览</p>
+          <h2 data-i18n="index.guide.title">一听钟声深处，半入枫桥画中</h2>
+          <p data-i18n="index.guide.summary">欢迎来到枫桥，这里不只是古运河畔的一处景点，更是《枫桥夜泊》里穿越千年的回响。请放慢脚步，在古寺、古桥与流水间，寻回那份独属于江南的宁静与诗意</p>
+        </div>
+
+        <div class="overview-grid">
+          <article class="overview-card overview-card-primary">
+            <h3 data-i18n="index.guide.card1.title">景区概貌</h3>
+            <p data-i18n="index.guide.card1.p1">今日的枫桥景区，是以寒山寺为核心，整合大运河故道、铁铃关、江村桥及水乡水巷资源形成的文化生态保护区。</p>
+            <p data-i18n="index.guide.card1.p2">景区完整保留了 “粉墙黛瓦、人家枕河” 的江南水乡格局，是苏式传统生活形态的典型留存区域。通过持续开展生态修复与环境提升，铁铃关等历史遗存与新建的运河步道、滨水绿廊有机融合，实现了历史风貌保护与现代公共休闲功能的衔接。</p>
+            <p data-i18n="index.guide.card1.p3">作为苏州城西重要的生态休闲空间，枫桥景区既是市民日常休憩的城市绿肺，也是展示大运河文化带建设成果、传播江南水乡文化的重要窗口。</p>
+          </article>
+          <article class="overview-card">
+            <h3 data-i18n="index.guide.card2.title">历史脉络</h3>
+            <p data-i18n="index.guide.card2.p">枫桥的历史脉络可追溯至隋唐时期，于明清两代达到鼎盛。作为大运河沿线重要节点，它曾是 “吴门第一关”，承担漕运枢纽与军事防御功能，见证了苏州城市发展与商贸兴衰。</p>
+          </article>
+          <article class="overview-card">
+            <h3 data-i18n="index.guide.card3.title">文学滥觞</h3>
+            <p data-i18n="index.guide.card3.p">唐代诗人张继《枫桥夜泊》的流传，使枫桥成为极具影响力的文化符号；明代铁铃关的修筑，更赋予其抵御外侮的历史意义。从漕运商贸的繁华盛景，到文人雅士的诗意吟咏，再到保家卫国的烽火记忆，历史印记层层积淀，赋予景区内古桥、古碑、关隘等遗存深厚的文化内涵与历史价值。</p>
+          </article>
+          <article class="overview-card overview-card-notice">
+            <h3 data-i18n="index.guide.notice.title">参观须知</h3>
+            <ul class="overview-note-list">
+              <li data-i18n="index.guide.notice.item1">文明游园，爱护景观设施，保持环境整洁。</li>
+              <li data-i18n="index.guide.notice.item2">宠物、危险品及机动车、非机动车不得进入游览区域。</li>
+              <li data-i18n="index.guide.notice.item3">注意水域安全，请勿攀爬翻越；放飞无人机等活动需事先许可。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-services" id="services">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="index.services.eyebrow">攻略秘籍</p>
+        </div>
+
+        <div class="services-top-panel" aria-label="概览信息">
+          <section class="weather-card" aria-label="当日天气">
+            <div class="weather-card-head">
+              <div>
+                <p class="eyebrow" data-i18n="index.weather.eyebrow">当日天气</p>
+                <h2 data-i18n="index.weather.title">枫桥出游指数</h2>
+              </div>
+              <div class="weather-card-status">
+                <span class="weather-date" data-weather-date>加载中</span>
+                <span class="weather-update-pill" data-weather-update>实时天气接入中</span>
+              </div>
+            </div>
+
+            <div class="weather-ticker" data-weather-ticker>
+              <article class="weather-slide is-active" data-weather-slide="overview">
+                <div class="weather-main">
+                  <span class="weather-icon" aria-hidden="true" data-weather-icon>…</span>
+                  <div>
+                    <strong data-weather-temp>实时获取中</strong>
+                    <p data-weather-summary>正在同步枫桥景区当日天气。</p>
+                  </div>
+                </div>
+                <div class="weather-meta">
+                  <span data-weather-high>最高 --°C</span>
+                  <span data-weather-low>最低 --°C</span>
+                </div>
+              </article>
+
+              <article class="weather-slide" data-weather-slide="air">
+                <div class="weather-main">
+                  <span class="weather-badge" data-weather-aqi-badge>AQI --</span>
+                  <div>
+                    <strong data-weather-aqi-level>空气质量同步中</strong>
+                    <p data-weather-aqi-summary>正在获取实时空气质量数据。</p>
+                  </div>
+                </div>
+                <div class="weather-meta">
+                  <span data-weather-pm25>PM2.5 --</span>
+                  <span data-weather-aqi-tip>出行建议加载中</span>
+                </div>
+              </article>
+
+              <article class="weather-slide" data-weather-slide="comfort">
+                <div class="weather-main">
+                  <span class="weather-badge" data-weather-humidity-badge>湿度 --</span>
+                  <div>
+                    <strong data-weather-wind>风速 --</strong>
+                    <p data-weather-comfort-summary>正在生成当日出游感受。</p>
+                  </div>
+                </div>
+                <div class="weather-meta">
+                  <span data-weather-location>定位到枫桥景区</span>
+                </div>
+              </article>
+
+              <article class="weather-slide weather-slide-forecast" data-weather-slide="forecast">
+                <div class="forecast-slide-head">
+                  <div>
+                    <p class="eyebrow" data-i18n="index.forecast.eyebrow">未来 7 天</p>
+                    <h3 data-i18n="index.forecast.title">一周天气趋势</h3>
+                  </div>
+                  <span class="forecast-update" data-forecast-update>同步中</span>
+                </div>
+                <div class="forecast-chart" data-forecast-chart aria-live="polite">
+                  正在生成未来一周天气趋势...
+                </div>
+                <div class="forecast-legend" aria-label="气温图例">
+                  <span><i class="forecast-legend-line forecast-legend-line-high" aria-hidden="true"></i><span data-i18n="index.forecast.high">最高温</span></span>
+                  <span><i class="forecast-legend-line forecast-legend-line-low" aria-hidden="true"></i><span data-i18n="index.forecast.low">最低温</span></span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <a class="temple-hours-card temple-ticket-card" href="https://m.cloud.sz-trip.com/ScenicDetail?type=scenic&id=5257" target="_blank" rel="noopener noreferrer" aria-label="寒山寺开放信息与在线订票，前往寒山寺票务页面">
+            <div class="temple-hours-head">
+              <p class="temple-hours-date" data-temple-date>加载中</p>
+              <p class="temple-hours-kicker">园区开放提示</p>
+            </div>
+            <div class="temple-hours-body">
+              <h2 class="temple-hours-title">寒山寺园区，中国十大名寺之一</h2>
+              <div class="temple-hours-schedule" aria-label="开放时间">
+                <p class="temple-hours-primary">4月1日起：7:30-17:30（停止入园）,18:00清园</p>
+                <p class="temple-hours-secondary">7:30-17:00（停止入园），17:30清园</p>
+              </div>
+              <div class="temple-ticket-panel" aria-label="购票入口">
+                <img class="temple-ticket-image" src="images/ticket.png" alt="在线订票图标">
+                <div class="temple-ticket-copy">
+                  <h3 data-i18n="index.services.ticket.title">在线订票</h3>
+                  <p class="temple-ticket-time" data-i18n="index.services.ticket.time">服务时间：07:30-17:00</p>
+                  <p class="temple-ticket-note" data-i18n="index.services.ticket.note">点击图标即可跳转至购票页面</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="services-grid services-grid-single">
+          <article class="service-card service-card-accent">
+            <span class="entry-tag" data-i18n="index.services.travel.tag">出行</span>
+            <h3 data-i18n="index.services.travel.title">景区怎么到</h3>
+            <div class="travel-list">
+              <div class="travel-item">
+                <p data-i18n-html="index.services.travel.metro"><strong>地铁：</strong>乘坐地铁1号线至「西环路站」下车，步行约15分钟可达。</p>
+                <button class="travel-detail-button" type="button" data-travel-detail-trigger="metro" data-i18n="index.services.travel.detail">详情</button>
+              </div>
+              <div class="travel-item">
+                <p data-i18n-html="index.services.travel.bus"><strong>公交：</strong>可乘坐301路、303路、313路、406路、415路、442路至「枫桥景区站」下车。</p>
+                <button class="travel-detail-button" type="button" data-travel-detail-trigger="bus" data-i18n="index.services.travel.detail">详情</button>
+              </div>
+              <div class="travel-item">
+                <p data-i18n-html="index.services.travel.drive"><strong>自驾：</strong>景区内设有停车场，位于枫桥路与寒山寺路交叉口，收费标准为10元/次。</p>
+                <button class="travel-detail-button" type="button" data-travel-detail-trigger="drive" data-i18n="index.services.travel.detail">详情</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-entries">
+        <div class="entry-layout">
+          <div class="agent-banner">
+            <div>
+              <p class="eyebrow" data-i18n="index.entries.agent.eyebrow">智能枫桥</p>
+              <h2 data-i18n="index.entries.agent.title">在这里，让我们走得更深入些</h2>
+              <p data-i18n="index.entries.agent.p">智能枫桥承担首页之外的即时帮助，让“想知道下一步看什么”的用户不需要自己摸索。它既适合游客快速找入口，也适合居民直接跳到公告信息。</p>
+            </div>
+            <div class="agent-entry-actions">
+              <button class="button button-primary" type="button" data-open-assistant="homepage" data-i18n="index.entries.agent.open">打开智能枫桥</button>
+              <a class="button button-secondary" href="smart-agent.html" data-i18n="index.entries.agent.full">查看完整助手页</a>
+            </div>
+          </div>
+
+          <div class="entry-grid">
+            <a class="entry-card" href="interactive-map.html">
+              <span class="entry-tag" data-i18n="index.entries.map.tag">互动地图</span>
+              <h3 data-i18n="index.entries.map.title">实景导览</h3>
+              <p data-i18n="index.entries.map.p">支持个性化路线定制，直观掌握景点布局，让您出行更省心。</p>
+            </a>
+            <a class="entry-card entry-card-photo" href="photo-wall.html">
+              <span class="entry-tag" data-i18n="index.entries.photo.tag">照片墙</span>
+              <h3 data-i18n="index.entries.photo.title">撞见枫桥光影</h3>
+              <p data-i18n="index.entries.photo.p">汇集经典场景与游客实拍，用图片感受枫桥的诗意，提前种草打卡点。</p>
+            </a>
+            <a class="entry-card entry-card-notice" href="notice-board.html">
+              <span class="entry-tag" data-i18n="index.entries.notice.tag">公告栏</span>
+              <h3 data-i18n="index.entries.notice.title">最新动态提醒</h3>
+              <p data-i18n="index.entries.notice.p">集中展示最新社区活动、景区运营与便民服务通知，让您及时了解重要信息。</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="assistant-modal" id="assistant-modal" aria-hidden="true">
+    <div class="assistant-modal-backdrop" data-close-assistant="true"></div>
+    <section class="assistant-sheet" role="dialog" aria-modal="true" aria-labelledby="assistant-sheet-title">
+      <header class="assistant-sheet-header">
+        <div>
+          <p class="eyebrow" data-i18n="index.modal.kicker">智能枫桥</p>
+          <h2 id="assistant-sheet-title" data-i18n="index.modal.title">景区导览助手</h2>
+        </div>
+        <button class="assistant-close" type="button" data-close-assistant="true" aria-label="关闭智能枫桥" data-i18n="common.close">关闭</button>
+      </header>
+      <div class="assistant-sheet-body" id="assistant-modal-root"></div>
+    </section>
+  </div>
+
+  <div class="travel-detail-modal" id="travel-detail-modal" aria-hidden="true">
+    <div class="travel-detail-modal-backdrop" data-close-travel-modal="true"></div>
+    <section class="travel-detail-sheet" role="dialog" aria-modal="true" aria-labelledby="travel-detail-title">
+      <header class="travel-detail-sheet-header">
+        <div>
+          <p class="eyebrow" data-i18n="index.services.travel.modal.kicker">出行详情</p>
+          <h2 id="travel-detail-title">地铁路线详情</h2>
+        </div>
+        <button class="travel-detail-close" type="button" data-close-travel-modal="true" data-i18n="common.close" aria-label="关闭">关闭</button>
+      </header>
+      <div class="travel-detail-sheet-body" id="travel-detail-modal-root"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="smart-agent-data.js"></script>
+  <script src="smart-agent.js"></script>
+</body>
+</html>
